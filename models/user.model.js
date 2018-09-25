@@ -10,6 +10,10 @@ const CONFIG            = require('../config/config');
 let UserSchema = mongoose.Schema({
     first:      {type:String},
     last:       {type:String},
+    city:       {type:String},
+    state:      {type:String},
+    district:   {type:String},
+    pincode:    {type:Number},
     phone:	    {type:String, lowercase:true, trim: true, index: true, unique: true, sparse: true,//sparse is because now we have two possible unique keys that are optional
         validate:[validate({
             validator: 'isNumeric',

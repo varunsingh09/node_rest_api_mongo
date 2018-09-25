@@ -24,7 +24,7 @@ const getAll = async function(req, res){
 
     let companies_json = []
     for (let i in companies){
-        let company = companies[i];
+        let company = companies[i];console.log("********11111111111111d423423443************",company);
         companies_json.push(company.toWeb())
     }
     return ReS(res, {companies: companies_json});
